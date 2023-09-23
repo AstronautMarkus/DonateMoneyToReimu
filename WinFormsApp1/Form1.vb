@@ -71,4 +71,11 @@ Public Class Form1
 
     End Sub
 
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+
+        MessageBox.Show("Chau mi rey", "Salir", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Me.Close()
+
+    End Sub
+
 End Class

@@ -29,6 +29,7 @@ Partial Class Form1
         btnDonate = New Button()
         titleP2 = New Label()
         Button1 = New Button()
+        btnExit = New Label()
         CType(imgReimu, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -97,6 +98,18 @@ Partial Class Form1
         Button1.Text = "Coming soon"
         Button1.UseVisualStyleBackColor = False
         ' 
+        ' btnExit
+        ' 
+        btnExit.AutoSize = True
+        btnExit.Cursor = Cursors.Hand
+        btnExit.Font = New Font("Roboto", 26.25F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        btnExit.ForeColor = Color.DarkRed
+        btnExit.Location = New Point(648, 492)
+        btnExit.Name = "btnExit"
+        btnExit.Size = New Size(89, 42)
+        btnExit.TabIndex = 6
+        btnExit.Text = "Salir"
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -104,6 +117,7 @@ Partial Class Form1
         BackColor = SystemColors.ActiveCaption
         CausesValidation = False
         ClientSize = New Size(780, 557)
+        Controls.Add(btnExit)
         Controls.Add(Button1)
         Controls.Add(titleP2)
         Controls.Add(btnDonate)
@@ -128,4 +142,5 @@ Partial Class Form1
     Friend WithEvents btnDonate As Button
     Friend WithEvents titleP2 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents btnExit As Label
 End Class

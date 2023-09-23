@@ -31,7 +31,7 @@ Partial Class DataMenu
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Roboto Bk", 48F, FontStyle.Italic, GraphicsUnit.Point)
-        Label1.Location = New Point(54, 42)
+        Label1.Location = New Point(54, 31)
         Label1.Name = "Label1"
         Label1.Size = New Size(687, 77)
         Label1.TabIndex = 0
@@ -52,7 +52,7 @@ Partial Class DataMenu
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ActiveCaption
-        ClientSize = New Size(784, 561)
+        ClientSize = New Size(780, 557)
         Controls.Add(btnReverse)
         Controls.Add(Label1)
         FormBorderStyle = FormBorderStyle.Fixed3D
@@ -61,7 +61,7 @@ Partial Class DataMenu
         MaximumSize = New Size(800, 600)
         Name = "DataMenu"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "DataMenu"
+        Text = "Reimus"
         ResumeLayout(False)
         PerformLayout()
     End Sub

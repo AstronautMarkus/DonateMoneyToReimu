@@ -1,4 +1,6 @@
-﻿Public Class Form1
+﻿Imports System.Runtime.CompilerServices
+
+Public Class Form1
 
     Private githubClicks As Integer = 0 ' Variable de clicks para el secreto de la foto
 
@@ -64,8 +66,9 @@
 
     Private Sub Button1_Click_2(sender As Object, e As EventArgs) Handles Button1.Click
 
-        MessageBox.Show("Proximamente los consejos serán cientos y por una base de datos", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        MessageBox.Show("¿Alguien está leyendo esto?", "¿Hola?", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Me.Hide()
+        DataMenu.Show()
 
     End Sub
+
 End Class

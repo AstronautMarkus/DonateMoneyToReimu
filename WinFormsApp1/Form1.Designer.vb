@@ -114,7 +114,6 @@ Partial Class Form1
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MaximizeBox = False
         MaximumSize = New Size(800, 600)
-        MinimizeBox = False
         Name = "Form1"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Un poco de sabiduría de Reimu"

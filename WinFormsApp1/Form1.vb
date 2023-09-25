@@ -11,28 +11,6 @@ Public Class Form1
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles BtnConsejo.Click
 
-        ' Generar un número aleatorio entre 1 y 5
-        'Dim random As New Random()
-
-        'Dim numero As Integer = random.Next(1, 6)
-
-        ' Mostrar mensajes diferentes según el valor de la variable "numero"
-
-        'Select Case numero
-        '    Case 1
-        '        MessageBox.Show("En el mundo de la informática, la paciencia es una virtud y la perseverancia es la clave del éxito.", "Consejo sabio", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        '    Case 2
-        '        MessageBox.Show("La seguridad informática es como un escudo invisible; nunca te das cuenta de su importancia hasta que la necesitas desesperadamente.", "Consejo sabio", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        '    Case 3
-        '        MessageBox.Show("La tecnología avanza a pasos agigantados, pero nunca olvides que la creatividad y la innovación son el motor que impulsa el progreso en la informática.", "Consejo sabio", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        '    Case 4
-        '        MessageBox.Show("En la era digital, la información es poder, pero solo aquellos que la gestionan de manera inteligente pueden convertirla en conocimiento valioso.", "Consejo sabio", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        '    Case 5
-        '        MessageBox.Show("La informática es un puente que conecta mundos. Asegúrate de construir puentes fuertes y seguros para un futuro digital sólido y confiable.", "Consejo sabio", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        'End Select
-
-        'guardo este código de acá arriba porque me gustó bastante, a pesar de que el de ahora es mejor y con DB
-
         Using conn As New SQLiteConnection(connectionString)
 
             conn.Open()

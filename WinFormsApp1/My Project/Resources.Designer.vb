@@ -61,6 +61,67 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca una cadena traducida similar a INSERT INTO CONSEJO VALUES (1, &apos;La paciencia es la clave del éxito.&apos;);
+        '''INSERT INTO CONSEJO VALUES (2, &apos;Aprende de tus errores y crece.&apos;);
+        '''INSERT INTO CONSEJO VALUES (3, &apos;La perseverancia supera la habilidad.&apos;);
+        '''INSERT INTO CONSEJO VALUES (4, &apos;La sabiduría es la verdadera riqueza.&apos;);
+        '''INSERT INTO CONSEJO VALUES (5, &apos;El conocimiento es el poder.&apos;);
+        '''INSERT INTO CONSEJO VALUES (6, &apos;La gratitud transforma la vida.&apos;);
+        '''INSERT INTO CONSEJO VALUES (7, &apos;Sé amable, siempre.&apos;);
+        '''INSERT INTO CONSEJO VALUES (8, &apos;La  [resto de la cadena truncado]&quot;;.
+        '''</summary>
+        Friend ReadOnly Property consejosList() As String
+            Get
+                Return ResourceManager.GetString("consejosList", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property donation_average() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("donation_average", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property donation_high() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("donation_high", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property donation_higher() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("donation_higher", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property donation_low() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("donation_low", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property fumo() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("fumo", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property fumoFlip() As System.Drawing.Bitmap

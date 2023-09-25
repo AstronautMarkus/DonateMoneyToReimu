@@ -28,7 +28,7 @@ Partial Class Form1
         titleP1 = New Label()
         BtnDonate = New Button()
         titleP2 = New Label()
-        BtnComingSoon = New Button()
+        BtnAdminControl = New Button()
         BtnExit = New Label()
         CType(imgReimu, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -86,17 +86,17 @@ Partial Class Form1
         titleP2.TabIndex = 4
         titleP2.Text = """Reimu Programming"""
         ' 
-        ' BtnComingSoon
+        ' BtnAdminControl
         ' 
-        BtnComingSoon.BackColor = Color.SteelBlue
-        BtnComingSoon.Cursor = Cursors.Hand
-        BtnComingSoon.Font = New Font("Roboto", 26.25F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
-        BtnComingSoon.Location = New Point(512, 173)
-        BtnComingSoon.Name = "BtnComingSoon"
-        BtnComingSoon.Size = New Size(260, 100)
-        BtnComingSoon.TabIndex = 5
-        BtnComingSoon.Text = "Coming soon"
-        BtnComingSoon.UseVisualStyleBackColor = False
+        BtnAdminControl.BackColor = Color.SteelBlue
+        BtnAdminControl.Cursor = Cursors.Hand
+        BtnAdminControl.Font = New Font("Roboto", 21.75F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        BtnAdminControl.Location = New Point(12, 494)
+        BtnAdminControl.Name = "BtnAdminControl"
+        BtnAdminControl.Size = New Size(142, 51)
+        BtnAdminControl.TabIndex = 5
+        BtnAdminControl.Text = "ADMIN"
+        BtnAdminControl.UseVisualStyleBackColor = False
         ' 
         ' BtnExit
         ' 
@@ -118,7 +118,7 @@ Partial Class Form1
         CausesValidation = False
         ClientSize = New Size(780, 557)
         Controls.Add(BtnExit)
-        Controls.Add(BtnComingSoon)
+        Controls.Add(BtnAdminControl)
         Controls.Add(titleP2)
         Controls.Add(BtnDonate)
         Controls.Add(titleP1)
@@ -141,6 +141,6 @@ Partial Class Form1
     Friend WithEvents titleP1 As Label
     Friend WithEvents BtnDonate As Button
     Friend WithEvents titleP2 As Label
-    Friend WithEvents BtnComingSoon As Button
+    Friend WithEvents BtnAdminControl As Button
     Friend WithEvents BtnExit As Label
 End Class

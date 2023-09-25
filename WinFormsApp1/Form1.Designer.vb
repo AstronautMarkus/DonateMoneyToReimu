@@ -23,27 +23,27 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Form1))
-        btnConsejo = New Button()
+        BtnConsejo = New Button()
         imgReimu = New PictureBox()
         titleP1 = New Label()
-        btnDonate = New Button()
+        BtnDonate = New Button()
         titleP2 = New Label()
-        Button1 = New Button()
-        btnExit = New Label()
+        BtnComingSoon = New Button()
+        BtnExit = New Label()
         CType(imgReimu, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' btnConsejo
+        ' BtnConsejo
         ' 
-        btnConsejo.BackColor = Color.LemonChiffon
-        btnConsejo.Cursor = Cursors.Hand
-        btnConsejo.Font = New Font("Roboto", 26.25F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
-        btnConsejo.Location = New Point(184, 478)
-        btnConsejo.Name = "btnConsejo"
-        btnConsejo.Size = New Size(410, 70)
-        btnConsejo.TabIndex = 0
-        btnConsejo.Text = "Dame un consejo sabio"
-        btnConsejo.UseVisualStyleBackColor = False
+        BtnConsejo.BackColor = Color.LemonChiffon
+        BtnConsejo.Cursor = Cursors.Hand
+        BtnConsejo.Font = New Font("Roboto", 26.25F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        BtnConsejo.Location = New Point(184, 478)
+        BtnConsejo.Name = "BtnConsejo"
+        BtnConsejo.Size = New Size(410, 70)
+        BtnConsejo.TabIndex = 0
+        BtnConsejo.Text = "Dame un consejo sabio"
+        BtnConsejo.UseVisualStyleBackColor = False
         ' 
         ' imgReimu
         ' 
@@ -64,17 +64,17 @@ Partial Class Form1
         titleP1.TabIndex = 2
         titleP1.Text = "Consejos Sabios"
         ' 
-        ' btnDonate
+        ' BtnDonate
         ' 
-        btnDonate.BackColor = Color.SpringGreen
-        btnDonate.Cursor = Cursors.Hand
-        btnDonate.Font = New Font("Roboto", 26.25F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
-        btnDonate.Location = New Point(512, 67)
-        btnDonate.Name = "btnDonate"
-        btnDonate.Size = New Size(260, 100)
-        btnDonate.TabIndex = 3
-        btnDonate.Text = "Donar plata a Reimu"
-        btnDonate.UseVisualStyleBackColor = False
+        BtnDonate.BackColor = Color.SpringGreen
+        BtnDonate.Cursor = Cursors.Hand
+        BtnDonate.Font = New Font("Roboto", 26.25F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        BtnDonate.Location = New Point(512, 67)
+        BtnDonate.Name = "BtnDonate"
+        BtnDonate.Size = New Size(260, 100)
+        BtnDonate.TabIndex = 3
+        BtnDonate.Text = "Donar plata a Reimu"
+        BtnDonate.UseVisualStyleBackColor = False
         ' 
         ' titleP2
         ' 
@@ -86,29 +86,29 @@ Partial Class Form1
         titleP2.TabIndex = 4
         titleP2.Text = """Reimu Programming"""
         ' 
-        ' Button1
+        ' BtnComingSoon
         ' 
-        Button1.BackColor = Color.SteelBlue
-        Button1.Cursor = Cursors.Hand
-        Button1.Font = New Font("Roboto", 26.25F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
-        Button1.Location = New Point(512, 173)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(260, 100)
-        Button1.TabIndex = 5
-        Button1.Text = "Coming soon"
-        Button1.UseVisualStyleBackColor = False
+        BtnComingSoon.BackColor = Color.SteelBlue
+        BtnComingSoon.Cursor = Cursors.Hand
+        BtnComingSoon.Font = New Font("Roboto", 26.25F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        BtnComingSoon.Location = New Point(512, 173)
+        BtnComingSoon.Name = "BtnComingSoon"
+        BtnComingSoon.Size = New Size(260, 100)
+        BtnComingSoon.TabIndex = 5
+        BtnComingSoon.Text = "Coming soon"
+        BtnComingSoon.UseVisualStyleBackColor = False
         ' 
-        ' btnExit
+        ' BtnExit
         ' 
-        btnExit.AutoSize = True
-        btnExit.Cursor = Cursors.Hand
-        btnExit.Font = New Font("Roboto", 26.25F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
-        btnExit.ForeColor = Color.DarkRed
-        btnExit.Location = New Point(648, 492)
-        btnExit.Name = "btnExit"
-        btnExit.Size = New Size(89, 42)
-        btnExit.TabIndex = 6
-        btnExit.Text = "Salir"
+        BtnExit.AutoSize = True
+        BtnExit.Cursor = Cursors.Hand
+        BtnExit.Font = New Font("Roboto", 26.25F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        BtnExit.ForeColor = Color.DarkRed
+        BtnExit.Location = New Point(648, 492)
+        BtnExit.Name = "BtnExit"
+        BtnExit.Size = New Size(89, 42)
+        BtnExit.TabIndex = 6
+        BtnExit.Text = "Salir"
         ' 
         ' Form1
         ' 
@@ -117,13 +117,13 @@ Partial Class Form1
         BackColor = SystemColors.ActiveCaption
         CausesValidation = False
         ClientSize = New Size(780, 557)
-        Controls.Add(btnExit)
-        Controls.Add(Button1)
+        Controls.Add(BtnExit)
+        Controls.Add(BtnComingSoon)
         Controls.Add(titleP2)
-        Controls.Add(btnDonate)
+        Controls.Add(BtnDonate)
         Controls.Add(titleP1)
         Controls.Add(imgReimu)
-        Controls.Add(btnConsejo)
+        Controls.Add(BtnConsejo)
         FormBorderStyle = FormBorderStyle.Fixed3D
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MaximizeBox = False
@@ -136,11 +136,11 @@ Partial Class Form1
         PerformLayout()
     End Sub
 
-    Friend WithEvents btnConsejo As Button
+    Friend WithEvents BtnConsejo As Button
     Friend WithEvents imgReimu As PictureBox
     Friend WithEvents titleP1 As Label
-    Friend WithEvents btnDonate As Button
+    Friend WithEvents BtnDonate As Button
     Friend WithEvents titleP2 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents btnExit As Label
+    Friend WithEvents BtnComingSoon As Button
+    Friend WithEvents BtnExit As Label
 End Class

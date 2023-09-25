@@ -40,7 +40,7 @@ Partial Class DataMenu
         ' btnReverse
         ' 
         btnReverse.Font = New Font("Roboto Cn", 27.75F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
-        btnReverse.Location = New Point(194, 397)
+        btnReverse.Location = New Point(190, 424)
         btnReverse.Name = "btnReverse"
         btnReverse.Size = New Size(370, 121)
         btnReverse.TabIndex = 1

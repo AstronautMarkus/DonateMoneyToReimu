@@ -33,7 +33,7 @@ Public Class Form1
                 Me.Close() ' Cierra la aplicación si no se crea la base de datos
             End If
         Else
-            MessageBox.Show("Base de datos detectada.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            'MessageBox.Show("Base de datos detectada.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
 
 

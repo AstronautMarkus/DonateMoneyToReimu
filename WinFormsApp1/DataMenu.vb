@@ -24,7 +24,7 @@ Public Class DataMenu
 
     End Sub
 
-    Private Sub BtnCargarDatos_Click(sender As Object, e As EventArgs) Handles BtnCargarDatos.Click ' no me lo borre compa Handles BtnCargarDatos.Click
+    Private Sub BtnCargarDatos_Click(sender As Object, e As EventArgs) Handles BtnCargarDatos.Click  ' no me lo borre compa Handles BtnCargarDatos.Click
 
         conn.Open()
 
@@ -71,9 +71,9 @@ Public Class DataMenu
             If result IsNot Nothing Then
                 ' Mostrar el resultado en el TextBox
                 DonacionesTotalTextBox.Text = result.ToString()
-            Else
+            ElseIf result = "0" Then
                 ' Si no hay resultados, mostrar un mensaje o realizar alguna otra acción
-                DonacionesTotalTextBox.Text = "No se encontraron registros."
+                DonacionesTotalTextBox.Text = "No se encontraron registros.".ToString()
             End If
             conn.Close()
         Catch ex As Exception
@@ -98,7 +98,7 @@ Public Class DataMenu
         conn.Close()
 
         If rowCount = 0 Then
-            MessageBox.Show("No hay datos para borrar en la tabla.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("No hay consejos para eliminar en la base de datos.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Else
 
 
@@ -128,7 +128,7 @@ Public Class DataMenu
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles BtnRestaurarConsejos.Click
 
         conn.Open()
 
@@ -174,4 +174,81 @@ Public Class DataMenu
 
 
     End Sub
+
+    Private Sub BtnDeleteDonaciones_Click(sender As Object, e As EventArgs) Handles BtnDeleteDonaciones.Click
+
+
+        conn.Open()
+
+        ' Consulta para contar los registros en la tabla
+        Dim sqlCountDonaciones As String = "SELECT COUNT(*) FROM DONACIONES;"
+        Dim cmdCount As New SQLiteCommand(sqlCountDonaciones, conn)
+
+        ' Ejecutar la consulta para contar los registros
+        Dim rowCount As Integer = CInt(cmdCount.ExecuteScalar())
+
+        ' Cerrar la conexión
+        conn.Close()
+
+
+        If rowCount < 1 Then
+
+            MessageBox.Show("No hay donaciones para eliminar en la base de datos.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+        Else
+
+            Dim DeleteDonaciones As DialogResult = MessageBox.Show("¿Quiere eliminar las donaciones de la base de datos?", "Alerta", MessageBoxButtons.YesNo)
+
+            If DeleteDonaciones = DialogResult.Yes Then
+                conn.Open()
+
+                Dim sqlDeleteAllConsejos As String = "DELETE FROM DONACIONES;"
+
+                Dim cmdDelete As New SQLiteCommand(sqlDeleteAllConsejos, conn)
+
+                ' Ejecutar el comando para borrar los datos
+                cmdDelete.ExecuteNonQuery()
+
+                conn.Close()
+
+                ' Se borraron todos los datos
+                MessageBox.Show("Las donaciones han sido borradas correctamente.", "Reimu estará triste", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+
+        End If
+
+
+
+    End Sub
+
+    Private Sub BtnRandDonaciones_Click(sender As Object, e As EventArgs) Handles BtnRandDonaciones.Click
+
+
+
+        Try
+
+            conn.Open()
+
+            Dim CargarDonaciones As String = My.Resources.donacionesList
+
+            Dim cmdDelete As New SQLiteCommand(CargarDonaciones, conn)
+
+            ' Ejecutar el comando para cargar los consejos
+            cmdDelete.ExecuteNonQuery()
+
+            conn.Close()
+
+            MessageBox.Show("Donaciones al azar cargadas exitosamente a la base de datos.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+
+        Catch ex As Exception
+
+            MessageBox.Show("Error, no se pudieron cargar los consejos a la base de datos. " & ex.Message)
+
+        End Try
+
+
+
+    End Sub
+
 End Class

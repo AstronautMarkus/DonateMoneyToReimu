@@ -77,6 +77,22 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca una cadena traducida similar a INSERT INTO donaciones (cantidad, nombre_donador) VALUES
+        '''  (CAST((ABS(RANDOM()) % 250000) + 1 AS INTEGER), &apos;Juan Pérez&apos;),
+        '''  (CAST((ABS(RANDOM()) % 250000) + 1 AS INTEGER), &apos;María Rodríguez&apos;),
+        '''  (CAST((ABS(RANDOM()) % 250000) + 1 AS INTEGER), &apos;Luisa González&apos;),
+        '''  (CAST((ABS(RANDOM()) % 250000) + 1 AS INTEGER), &apos;Carlos Sánchez&apos;),
+        '''  (CAST((ABS(RANDOM()) % 250000) + 1 AS INTEGER), &apos;Ana Martínez&apos;),
+        '''  (CAST((ABS(RANDOM()) % 250000) + 1 AS INTEGER), &apos;Pedro López&apos;),
+        '''  (CAST((ABS(RANDOM()) % 250000) + 1 AS IN [resto de la cadena truncado]&quot;;.
+        '''</summary>
+        Friend ReadOnly Property donacionesList() As String
+            Get
+                Return ResourceManager.GetString("donacionesList", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
         '''</summary>
         Friend ReadOnly Property donation_average() As System.IO.UnmanagedMemoryStream
@@ -137,6 +153,16 @@ Namespace My.Resources
         Friend ReadOnly Property reimu() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("reimu", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property sad_reimu() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("sad_reimu", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

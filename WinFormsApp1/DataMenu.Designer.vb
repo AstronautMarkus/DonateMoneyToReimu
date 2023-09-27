@@ -32,7 +32,9 @@ Partial Class DataMenu
         DonacionesTotalTextBox = New TextBox()
         BtnDeleteConsejos = New Button()
         Label3 = New Label()
-        Button1 = New Button()
+        BtnRestaurarConsejos = New Button()
+        BtnDeleteDonaciones = New Button()
+        BtnRandDonaciones = New Button()
         CType(DataGridConsejos, ComponentModel.ISupportInitialize).BeginInit()
         CType(DataGridDonaciones, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -51,7 +53,7 @@ Partial Class DataMenu
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Roboto Cn", 27.75F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
-        Label1.Location = New Point(87, 20)
+        Label1.Location = New Point(25, 20)
         Label1.Name = "Label1"
         Label1.Size = New Size(151, 44)
         Label1.TabIndex = 2
@@ -62,7 +64,7 @@ Partial Class DataMenu
         DataGridConsejos.BackgroundColor = Color.AntiqueWhite
         DataGridConsejos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridConsejos.GridColor = SystemColors.MenuHighlight
-        DataGridConsejos.Location = New Point(34, 94)
+        DataGridConsejos.Location = New Point(25, 105)
         DataGridConsejos.Name = "DataGridConsejos"
         DataGridConsejos.RowTemplate.Height = 25
         DataGridConsejos.Size = New Size(265, 353)
@@ -84,17 +86,17 @@ Partial Class DataMenu
         DataGridDonaciones.BackgroundColor = Color.AntiqueWhite
         DataGridDonaciones.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridDonaciones.GridColor = SystemColors.MenuHighlight
-        DataGridDonaciones.Location = New Point(409, 105)
+        DataGridDonaciones.Location = New Point(398, 105)
         DataGridDonaciones.Name = "DataGridDonaciones"
         DataGridDonaciones.RowTemplate.Height = 25
-        DataGridDonaciones.Size = New Size(344, 153)
+        DataGridDonaciones.Size = New Size(354, 153)
         DataGridDonaciones.TabIndex = 5
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Roboto Cn", 27.75F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
-        Label2.Location = New Point(494, 20)
+        Label2.Location = New Point(398, 20)
         Label2.Name = "Label2"
         Label2.Size = New Size(188, 44)
         Label2.TabIndex = 6
@@ -102,7 +104,7 @@ Partial Class DataMenu
         ' 
         ' DonacionesTotalTextBox
         ' 
-        DonacionesTotalTextBox.Location = New Point(572, 289)
+        DonacionesTotalTextBox.Location = New Point(592, 264)
         DonacionesTotalTextBox.Name = "DonacionesTotalTextBox"
         DonacionesTotalTextBox.Size = New Size(158, 23)
         DonacionesTotalTextBox.TabIndex = 7
@@ -111,9 +113,9 @@ Partial Class DataMenu
         ' 
         BtnDeleteConsejos.BackColor = Color.Brown
         BtnDeleteConsejos.Font = New Font("Roboto Cn", 15F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
-        BtnDeleteConsejos.Location = New Point(12, 483)
+        BtnDeleteConsejos.Location = New Point(25, 483)
         BtnDeleteConsejos.Name = "BtnDeleteConsejos"
-        BtnDeleteConsejos.Size = New Size(149, 62)
+        BtnDeleteConsejos.Size = New Size(150, 60)
         BtnDeleteConsejos.TabIndex = 8
         BtnDeleteConsejos.Text = "Eliminar consejos"
         BtnDeleteConsejos.UseVisualStyleBackColor = False
@@ -122,22 +124,44 @@ Partial Class DataMenu
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Roboto Cn", 15F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
-        Label3.Location = New Point(409, 288)
+        Label3.Location = New Point(429, 263)
         Label3.Name = "Label3"
         Label3.Size = New Size(150, 24)
         Label3.TabIndex = 9
         Label3.Text = "Total donaciones:"
         ' 
-        ' Button1
+        ' BtnRestaurarConsejos
         ' 
-        Button1.BackColor = Color.Green
-        Button1.Font = New Font("Roboto Cn", 15F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
-        Button1.Location = New Point(244, 12)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(108, 62)
-        Button1.TabIndex = 10
-        Button1.Text = "Restaurar Consejos"
-        Button1.UseVisualStyleBackColor = False
+        BtnRestaurarConsejos.BackColor = Color.Green
+        BtnRestaurarConsejos.Font = New Font("Roboto Cn", 15F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        BtnRestaurarConsejos.Location = New Point(182, 12)
+        BtnRestaurarConsejos.Name = "BtnRestaurarConsejos"
+        BtnRestaurarConsejos.Size = New Size(108, 62)
+        BtnRestaurarConsejos.TabIndex = 10
+        BtnRestaurarConsejos.Text = "Restaurar Consejos"
+        BtnRestaurarConsejos.UseVisualStyleBackColor = False
+        ' 
+        ' BtnDeleteDonaciones
+        ' 
+        BtnDeleteDonaciones.BackColor = Color.Brown
+        BtnDeleteDonaciones.Font = New Font("Roboto Cn", 15F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        BtnDeleteDonaciones.Location = New Point(618, 398)
+        BtnDeleteDonaciones.Name = "BtnDeleteDonaciones"
+        BtnDeleteDonaciones.Size = New Size(150, 60)
+        BtnDeleteDonaciones.TabIndex = 11
+        BtnDeleteDonaciones.Text = "Eliminar donaciones"
+        BtnDeleteDonaciones.UseVisualStyleBackColor = False
+        ' 
+        ' BtnRandDonaciones
+        ' 
+        BtnRandDonaciones.BackColor = Color.Green
+        BtnRandDonaciones.Font = New Font("Roboto Cn", 15F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        BtnRandDonaciones.Location = New Point(592, 5)
+        BtnRandDonaciones.Name = "BtnRandDonaciones"
+        BtnRandDonaciones.Size = New Size(176, 87)
+        BtnRandDonaciones.TabIndex = 12
+        BtnRandDonaciones.Text = "Generar donaciones al azar"
+        BtnRandDonaciones.UseVisualStyleBackColor = False
         ' 
         ' DataMenu
         ' 
@@ -145,7 +169,9 @@ Partial Class DataMenu
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ActiveCaption
         ClientSize = New Size(780, 557)
-        Controls.Add(Button1)
+        Controls.Add(BtnRandDonaciones)
+        Controls.Add(BtnDeleteDonaciones)
+        Controls.Add(BtnRestaurarConsejos)
         Controls.Add(Label3)
         Controls.Add(BtnDeleteConsejos)
         Controls.Add(DonacionesTotalTextBox)
@@ -176,5 +202,7 @@ Partial Class DataMenu
     Friend WithEvents DonacionesTotalTextBox As TextBox
     Friend WithEvents BtnDeleteConsejos As Button
     Friend WithEvents Label3 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BtnRestaurarConsejos As Button
+    Friend WithEvents BtnDeleteDonaciones As Button
+    Friend WithEvents BtnRandDonaciones As Button
 End Class
